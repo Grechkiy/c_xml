@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module version="1.8">
+	<external>
+		<CfgID value="{708D7E48-5015-4518-9D92-B913467A61D4}"/>
+		<Description value="Vibration 1 bearing"/>
+		<moduleLocation>
+			<System name="PGHstn">
+				<Network name="W3">
+					<Unit name="UNIT3">
+						<Drop name="DROP42">
+							<IoDevice name="I/O Interface 1 LocalOvation">
+								<Branch name="Branch 1">
+									<RSlot name="Slot 3">
+										<RModule name="5X00717G01" description="Machinery Health Monitor" ioLocation="1.1.3" modulePointName="MODULE3.UNIT3@W3"/>
+									</RSlot>
+								</Branch>
+							</IoDevice>
+						</Drop>
+					</Unit>
+				</Network>
+			</System>
+		</moduleLocation>
+		<PredictionPrimaryServer IPAddress="192.168.6.195" port="7253"/>
+		<PredictionSecondaryServer IPAddress="" port="7253"/>
+		<PredictionStatusSmv value="PREDWF_STATUS"/>
+		<PredictionOverflowSmv value="PREDWF_OVERFLOW"/>
+	</external>
+	<tachModule>
+		<tachOutput1>
+			<outState value="disable"/>
+			<terminateTachBus value="on"/>
+		</tachOutput1>
+		<tachOutput2>
+			<outState value="disable"/>
+			<terminateTachBus value="on"/>
+		</tachOutput2>
+	</tachModule>
+	<sensor channel="1">
+		<external>
+			<!-- 1 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S01_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R1"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="2">
+		<external>
+			<!-- 2 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S02_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R2"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="3">
+		<external>
+			<!-- 3 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S03_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R3"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="4">
+		<external>
+			<!-- 4 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S04_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R4"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="5">
+		<external>
+			<!-- 5 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S05_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R5"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="6">
+		<external>
+			<!-- 6 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S06_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R6"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="7">
+		<external>
+			<!-- 7 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S07_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R7"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+	<sensor channel="8">
+		<external>
+			<!-- 8 GENERIC AC -->
+			<measurementType>GENERIC AC</measurementType>
+			<measurementDescription></measurementDescription>
+		</external>
+		<companion value=""/>
+		<axle value="y"/>
+		<state value="enable"/>
+		<chanGround value="off"/>
+		<trackingFilter source="hpf"/>
+		<sensorSensitivity value="100.0"/>
+		<lowerFrequency value="1"/>
+		<chanRange value="0Vto24V"/>
+		<upperBias value="14"/>
+		<lowerBias value="8"/>
+		<sensorPower value="off"/>
+		<external>
+			<sensorType type="UserDefined"/>
+			<sensorUnits type=""/>
+		</external>
+		<useProgrammableHpf value="true"/>
+		<Hpf type="butterworth" order="4" corner="1%" frequency="1Hz">
+			<hpfBq1Gin value="0.99998591116286661"/>
+			<hpfBq1A1 value="1.99997182164803000"/>
+			<hpfBq1A2 value="-0.99997182300339471"/>
+			<hpfBq1B1 value="-2.00000000000000000"/>
+			<hpfBq1B2 value="1.00000000000000000"/>
+			<hpfBq2A1 value="1.99993197471263073"/>
+			<hpfBq2A2 value="-0.99993197606796880"/>
+			<hpfBq2Gin value="0.99996598769513412"/>
+			<hpfBq2B1 value="-2.00000000000000000"/>
+			<hpfBq2B2 value="1.00000000000000000"/>
+			<hpfBq3A1 value="0.00000000000000000"/>
+			<hpfBq3A2 value="0.00000000000000000"/>
+			<hpfBq3Gin value="1.00000000000000000"/>
+			<hpfBq3B1 value="0.00000000000000000"/>
+			<hpfBq3B2 value="0.00000000000000000"/>
+			<hpfBq4A1 value="0.00000000000000000"/>
+			<hpfBq4A2 value="0.00000000000000000"/>
+			<hpfBq4Gin value="1.00000000000000000"/>
+			<hpfBq4B1 value="0.00000000000000000"/>
+			<hpfBq4B2 value="0.00000000000000000"/>
+			<hpfBq5A1 value="0.00000000000000000"/>
+			<hpfBq5A2 value="0.00000000000000000"/>
+			<hpfBq5Gin value="1.00000000000000000"/>
+			<hpfBq5B1 value="0.00000000000000000"/>
+			<hpfBq5B2 value="0.00000000000000000"/>
+			<hpfGout value="1.00000000000000000"/>
+		</Hpf>
+		<useProgrammableBsf value="true"/>
+		<BsfSource value="hpf"/>
+		<Bsf type="butterworth" order="8" Center="127" Q="50" frequency="0Hz">
+			<bsfBq1Gin value="1.00000000000000000"/>
+			<bsfBq1A1 value="0.00000000000000000"/>
+			<bsfBq1A2 value="0.00000000000000000"/>
+			<bsfBq1B1 value="0.00000000000000000"/>
+			<bsfBq1B2 value="0.00000000000000000"/>
+			<bsfBq2A1 value="0.00000000000000000"/>
+			<bsfBq2A2 value="0.00000000000000000"/>
+			<bsfBq2Gin value="1.00000000000000000"/>
+			<bsfBq2B1 value="0.00000000000000000"/>
+			<bsfBq2B2 value="0.00000000000000000"/>
+			<bsfBq3A1 value="0.00000000000000000"/>
+			<bsfBq3A2 value="0.00000000000000000"/>
+			<bsfBq3Gin value="1.00000000000000000"/>
+			<bsfBq3B1 value="0.00000000000000000"/>
+			<bsfBq3B2 value="0.00000000000000000"/>
+			<bsfBq4A1 value="0.00000000000000000"/>
+			<bsfBq4A2 value="0.00000000000000000"/>
+			<bsfBq4Gin value="1.00000000000000000"/>
+			<bsfBq4B1 value="0.00000000000000000"/>
+			<bsfBq4B2 value="0.00000000000000000"/>
+			<bsfGout value="1.00000000000000000"/>
+		</Bsf>
+		<useProgrammableLpfPkPk value="true"/>
+		<LpfPkPk type="butterworth" order="4" corner="1%" frequency="20000Hz">
+			<lpfPkPkBq1Gin value="0.60809475183486938"/>
+			<lpfPkPkBq1A1 value="-0.65274750068783760"/>
+			<lpfPkPkBq1A2 value="-0.48819729778915644"/>
+			<lpfPkPkBq1B1 value="1.99999999906867743"/>
+			<lpfPkPkBq1B2 value="1.00000000000000000"/>
+			<lpfPkPkBq2A1 value="-0.47929209377616644"/>
+			<lpfPkPkBq2A2 value="-0.09273677505552769"/>
+			<lpfPkPkBq2Gin value="0.50512909889221191"/>
+			<lpfPkPkBq2B1 value="1.99999999906867743"/>
+			<lpfPkPkBq2B2 value="1.00000000000000000"/>
+			<lpfPkPkBq3A1 value="0.00000000000000000"/>
+			<lpfPkPkBq3A2 value="0.00000000000000000"/>
+			<lpfPkPkBq3Gin value="1.00000000000000000"/>
+			<lpfPkPkBq3B1 value="0.00000000000000000"/>
+			<lpfPkPkBq3B2 value="0.00000000000000000"/>
+			<lpfPkPkBq4A1 value="0.00000000000000000"/>
+			<lpfPkPkBq4A2 value="0.00000000000000000"/>
+			<lpfPkPkBq4Gin value="1.00000000000000000"/>
+			<lpfPkPkBq4B1 value="0.00000000000000000"/>
+			<lpfPkPkBq4B2 value="0.00000000000000000"/>
+			<lpfPkPkBq5A1 value="0.00000000000000000"/>
+			<lpfPkPkBq5A2 value="0.00000000000000000"/>
+			<lpfPkPkBq5Gin value="1.00000000000000000"/>
+			<lpfPkPkBq5B1 value="0.00000000000000000"/>
+			<lpfPkPkBq5B2 value="0.00000000000000000"/>
+			<lpfPkPkGout value="0.68481355905532837"/>
+		</LpfPkPk>
+		<genericAC>
+			<referenceTach>
+				<tachSource value="none"/>
+			</referenceTach>
+			<overalls>
+				<pk-pkMeas>
+					<smv value="S08_PK2PK"/>
+					<measRangeStart value="0"/>
+					<measRangeEnd value="480"/>
+					<register value="R8"/>
+					<peakHoldControl value="timer"/>
+					<peakInterval value="1"/>
+					<source value="hpf"/>
+					<lowerFrequency value="1"/>
+					<upperFrequency value="20000"/>
+				</pk-pkMeas>
+			</overalls>
+		</genericAC>
+		<waveForm>
+			<source value="hpf"/>
+			<tachSource value="none"/>
+			<upperFrequency value="2000"/>
+			<nSamples value="800"/>
+		</waveForm>
+		<predictionWaveForm>
+			<source value="rawADC"/>
+			<nSamples value="8192"/>
+			<enable value="false"/>
+			<upperFrequency value="2000"/>
+		</predictionWaveForm>
+	</sensor>
+</module>
