@@ -1,0 +1,3 @@
+D:/Projects/c_xml/cmake-build-debug/CMakeFiles/c_xml.dir
+D:/Projects/c_xml/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Projects/c_xml/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,76 @@
+Package: vcpkg-cmake
+Version: 2024-04-18
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5a05ae47442eaec7192d560349fa2b1b367ab8b1cf1114821cb9d4b0661da937
+Status: install ok installed
+
+Package: zlib
+Version: 1.3.1
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 80821769353a8d1d7b6dc23d272f1856a15e4e57ff4f519b9c032af013e197f5
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d8c817887b3337e29898dcf386b39d4604f91296c071af6436a99557c45b6177
+Status: install ok installed
+
+Package: liblzma
+Version: 5.4.4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 85866780c8cc33199b8141387d9e6934cfb7a8b12b6aeda36438ef668ef730eb
+Description: Compression library with an API similar to that of zlib.
+Status: install ok installed
+
+Package: libiconv
+Version: 1.17
+Port-Version: 3
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 38ef0c7313052a1d5074e1b131c8d472d02887150d3486eedb364552fc04ce04
+Description: GNU Unicode text conversion
+Status: install ok installed
+
+Package: libxml2
+Version: 2.11.7
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 78c4d110ecd581517d4cb9c663f3c5f0d03ab6dd24a9922ec531e0c6272ee2fd
+Description: Libxml2 is the XML C parser and toolkit developed for the Gnome project (but usable outside of the Gnome platform).
+Default-Features: iconv, lzma, zlib
+Status: install ok installed
+
+Package: libxml2
+Feature: iconv
+Depends: libiconv
+Architecture: x64-windows
+Multi-Arch: same
+Description: Add ICONV support
+Status: install ok installed
+
+Package: libxml2
+Feature: lzma
+Depends: liblzma
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use LZMA
+Status: install ok installed
+
+Package: libxml2
+Feature: zlib
+Depends: zlib
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use ZLib
+Status: install ok installed
+
