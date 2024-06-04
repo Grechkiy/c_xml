@@ -1,12 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<story>
-    <storyinfo>
-        <author>John Fleck</author>
-        <datewritten>June 2, 2002</datewritten>
-        <keyword>example keyword</keyword>
-    </storyinfo>
-    <body>
-        <headline>This is the headline</headline>
-        <para>This is the body text.</para>
-    </body>
-</story>
+<?xml version="1.0" encoding="utf-8"?>
+<module version="1.8">
+    <external>
+        <CfgID value="{708D7E48-5015-4518-9D92-B913467A61D4}"/>
+        <Description value="Vibration 1 bearing"/>
+        <moduleLocation>
+            <System name="PGHstn">
+                <Network name="W3">
+                    <Unit name="UNIT3">
+                        <Drop name="DROP42">
+                            <IoDevice name="I/O Interface 1 LocalOvation">
+                                <Branch name="Branch 1">
+                                    <RSlot name="Slot 3">
+                                        <RModule name="5X00717G01" description="Machinery Health Monitor" ioLocation="1.1.3" modulePointName="MODULE3.UNIT3@W3"/>
+                                    </RSlot>
+                                </Branch>
+                            </IoDevice>
+                        </Drop>
+                    </Unit>
+                </Network>
+            </System>
+        </moduleLocation>
+        <PredictionPrimaryServer IPAddress="192.168.6.195" port="7253"/>
+        <PredictionSecondaryServer IPAddress="" port="7253"/>
+        <PredictionStatusSmv value="PREDWF_STATUS"/>
+        <PredictionOverflowSmv value="PREDWF_OVERFLOW"/>
+    </external>
+</module>

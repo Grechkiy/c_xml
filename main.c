@@ -1,66 +1,43 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <libxml/xmlreader.h>
 #include <libxml/parser.h>
+#include <libxml/tree.h>
 
-void getReference(xmlDocPtr doc, xmlNodePtr cur) {
 
-    cur = cur->xmlChildrenNode;
-    while (cur != NULL) {
-        if ((!xmlStrcmp(cur->name, (const xmlChar *) "reference"))) {
-            printf("uri: %s\n", xmlGetProp(cur, "uri"));
+static void print_element_names(xmlNode *a_node) {
+    xmlNode *cur_node = NULL;
+
+    for (cur_node = a_node; cur_node; cur_node = cur_node->next) {
+        if (cur_node->type == XML_ELEMENT_NODE) {
+            printf("node type: Element, name: %s\n", cur_node->name);
+            if (cur_node->properties != NULL) {
+                xmlAttr *cur_node_pr= cur_node->properties;
+                for (cur_node_pr; cur_node_pr; cur_node_pr = cur_node_pr->next) {
+                    printf("\tnode type: %s: %s\n", cur_node_pr->name, cur_node_pr->children->content);
+                }
+            }
         }
-        cur = cur->next;
+        print_element_names(cur_node->children);
     }
-    return;
 }
-
-void parseDoc(char *docname) {
-
-    xmlDocPtr doc;
-    xmlNodePtr cur;
-
-    printf("%s \n", docname);
-    doc = xmlParseFile(docname);
-
-    if (doc == NULL) {
-        fprintf(stderr, "Document not parsed successfully. \n");
-        return;
-    }
-
-    cur = xmlDocGetRootElement(doc);
-
-    if (cur == NULL) {
-        fprintf(stderr, "empty document\n");
-        xmlFreeDoc(doc);
-        return;
-    }
-
-    if (xmlStrcmp(cur->name, (const xmlChar *) "story")) {
-        fprintf(stderr, "document of hte wrong type, root node != story");
-        xmlFreeDoc(doc);
-        return;
-    }
-
-    getReference(doc, cur);
-    xmlFreeDoc(doc);
-    return;
-}
-
 
 int main(int argc, char **argv) {
+    xmlDoc *doc = NULL;
+    xmlNode *root_element = NULL;
 
-    char *docname;
 
-    /*if (argc <= 1) {
-        printf("Usage: %s docname\n", argv[0]);
-        return (0);
-    }*/
+    doc = xmlReadFile("D:/Projects/c_xml/simple.xml", NULL, 0);
 
-    docname = "D:/Projects/c_xml/cmake-build-debug/simple.xml";
-    printf("Parasha: %d \n", argc);
-    parseDoc(docname);
+    if (doc == NULL) {
+        printf("error: could not parse file %s\n", argv[1]);
+    }
 
-    return (1);
+    root_element = xmlDocGetRootElement(doc);
+
+    print_element_names(root_element);
+
+    xmlFreeDoc(doc);
+
+    xmlCleanupParser();
+
+    return 0;
 }

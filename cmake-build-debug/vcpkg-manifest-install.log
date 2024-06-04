@@ -1,7 +1,7 @@
 Detecting compiler hash for triplet x64-windows...
 Compiler found: D:/Programs/Visual Studio/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/cl.exe
 All requested packages are currently installed.
-Total install time: 2.4 us
+Total install time: 2.6 us
 The package libxml2 is compatible with built-in CMake targets:
 
     find_package(LibXml2 REQUIRED)
